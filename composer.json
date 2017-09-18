@@ -1,0 +1,55 @@
+{
+    "name": "futuretek/yii2-debug",
+    "description": "Debug toolbar extension",
+    "keywords": [
+        "extension",
+        "debug",
+        "toolbar",
+        "yii"
+    ],
+    "type": "yii2-extension",
+    "license": "Apache-2.0",
+    "homepage": "http://www.futuretek.cz/",
+    "authors": [
+        {
+            "name": "Lukas Cerny",
+            "email": "lukas.cerny@futuretek.cz",
+            "homepage": "http://www.futuretek.cz",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/futuretek-solutions-ltd/ext-yii2-debug/issues",
+        "wiki": "https://github.com/futuretek-solutions-ltd/ext-yii2-debug/wiki",
+        "source": "https://github.com/futuretek-solutions-ltd/ext-yii2-debug"
+    },
+    "require": {
+        "php": ">=5.5.0",
+        "yiisoft/yii2-debug": "^2.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "futuretek\\debug\\": ""
+        }
+    },
+    "extra": {
+        "yii-config": {
+            "modules.dev": {
+                "debug": {
+                    "class": "yii\\debug\\Module",
+                    "panels": {
+                        "config": {
+                            "class": "futuretek\\debug\\ConfigPanel"
+                        },
+                        "option": {
+                            "class": "futuretek\\debug\\OptionPanel"
+                        }
+                    }
+                }
+            },
+            "bootstrap.dev": [
+                "debug"
+            ]
+        }
+    }
+}
