@@ -16,7 +16,6 @@ $options = OptionPanel::getOptions();
             <thead>
             <tr>
                 <th style="nowrap">Key</th>
-                <th style="nowrap">Name</th>
                 <th>Value</th>
             </tr>
             </thead>
@@ -24,7 +23,6 @@ $options = OptionPanel::getOptions();
             <?php foreach ($options as $item) { ?>
                 <tr>
                     <th style="white-space: normal"><?= Html::encode($item['name']) ?></th>
-                    <th style="white-space: normal"><?= Html::encode($item['title']) ?></th>
                     <td style="overflow:auto"><?= Html::encode($item['value']) ?></td>
                 </tr>
             <?php } ?>

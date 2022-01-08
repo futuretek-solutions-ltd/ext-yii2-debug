@@ -70,7 +70,7 @@ class OptionPanel extends Panel
     public static function getOptions()
     {
         return (new Query())
-            ->select(['name', 'title', 'value'])
+            ->select(['name', 'value'])
             ->from('option')
             ->orderBy(['name' => SORT_ASC])
             ->all();
